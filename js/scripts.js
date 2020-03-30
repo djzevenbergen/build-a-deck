@@ -8,23 +8,16 @@ $(document).ready(function () {
 
     const suites = ["Clubs", "Hearts", "Diamonds", "Spades"];
 
-    const finalResult = [];
+    var finalResult = [];
 
     suites.forEach(function (suite) {
-      newNumbers = numbers.map(function (number) {
-        return (number + " of " + suite +);
+      finalResult = numbers.map(function (number) {
+        return (number + " of " + suite + "<br>");
       });
-      finalResult.push(newNumbers);
-    });
 
-
-    $("#list").removeClass("hide");
-
-    finalResult.forEach(function (result) {
-      $("#list").append("<p>" + result + "</p>" + "<br>");
+      $("#list").append(finalResult);
 
     });
 
-    //alert(finalResult);
   });
 });
